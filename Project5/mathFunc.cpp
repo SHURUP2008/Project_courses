@@ -1,17 +1,17 @@
 #include "mathFunc.h"
 #include <iostream>
 
-int factorial(int n)
+int factorial(int x)
 {
-    if (n < 0)
-    {
-        return -1;
-    }
-    if (n == 1 || n == 0)
+    if (x < 0)
     {
         return 1;
     }
-    return n * factorial(n - 1);
+    if (x == 1 || x == 0)
+    {
+        return 1;
+    }
+    return x * factorial(x - 1);
 }
 
 float divAtoB(float a, float b)
@@ -19,10 +19,11 @@ float divAtoB(float a, float b)
     return a / b;
 }
 
-bool isPositive(int n)
+bool isPositive(int x)
 {
-    return (n > 0 ? true :false);
+    return (x > 0 ? true :false);
 }
+
 
 std::string reverseStr(std::string str)
 {
